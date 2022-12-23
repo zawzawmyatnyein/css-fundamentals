@@ -48,10 +48,10 @@ See [this code pen](https://codepen.io/jonasschmedtmann/pen/MWJZZQL/c8e97f50f726
 
 See [this article](https://css-tricks.com/snippets/css/complete-guide-grid/) for leaning more about how to use **grid** and its properties.
 
-See [this code pen](https://codepen.io/TurkAysenur/pen/QWyPMgq) for flex box in practical use.
+See [this code pen](https://codepen.io/TurkAysenur/pen/QWyPMgq) for grid in practical use.
 
-See [this code pen](https://codepen.io/oliviale/full/ZmvPPd) for flex box in practical use.
+See [this code pen](https://codepen.io/oliviale/full/ZmvPPd) for grid in practical use.
 
-See [this code pen](https://codepen.io/kathykato/pen/gdvjax) for flex box in practical use.
+See [this code pen](https://codepen.io/kathykato/pen/gdvjax) for grid in practical use.
 
-See [this code pen](https://codepen.io/GeorgePark/full/VXrwOP) for flex box in practical use.
+See [this code pen](https://codepen.io/GeorgePark/full/VXrwOP) for grid in practical use.
