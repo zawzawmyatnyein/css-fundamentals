@@ -5,7 +5,7 @@
     --color-gray-blue: hsl(217, 19%, 35%);
     --color-black-blue: hsl(219, 29%, 14%);
     --color-gray-light: hsl(0, 0%, 81%);
-    --color-gray-blue-light: hsl(210, 46%, 95%);
+    --color-gray-blue-light: hsl(210, 100%, 94%);
     --color-white: hsl(0, 0%, 100%);
     --default-font-size: 13px;
 }
@@ -28,7 +28,7 @@ body {
 
 .container {
     max-width: 1100px;
-    margin: 150px auto;
+    margin: 50px auto;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -105,38 +105,113 @@ body {
 }
 
 .card-3 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / -1;
+    background-color: var(--color-white);
+}
+
+.card-4 {
+    grid-column: 2 / span 2;
+    grid-row: 2 / -1;
+    background-color: var(--color-black-blue);
+}
+
+.card-5 {
     grid-column: 4 / -1;
     grid-row: 1 / -1;
     background-color: var(--color-white);
 }
 
-.card-4 {
-    grid-column: 1 / span 1;
-    background-color: var(--color-white);
-}
-
 .card-3 > .card-title,
-.card-4 > .card-title {
+.card-5 > .card-title {
     color: var(--color-gray-blue);
 }
 
 .card-3 > .card-body,
-.card-4 > .card-body {
+.card-5 > .card-body {
     color: var(--color-gray-light);
 }
 
 .card-3 .card-profile-details,
-.card-4 .card-profile-details {
+.card-5 .card-profile-details {
     color: var(--color-gray-blue);
 }
 
 .card-3 .card-profile-details > div:nth-of-type(2),
-.card-4 .card-profile-details > div:nth-of-type(2) {
+.card-5 .card-profile-details > div:nth-of-type(2) {
     color: hsla(217, 19%, 35%, 0.5);
 }
 
 
-.card-5 {
-    grid-column: 2 / span 2;
-    background-color: var(--color-black-blue);
+
+/* mobile frist approach */
+/* @media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 900px) {
+
+}
+
+@media screen and (min-width: 1100px) {
+
+} */
+
+
+
+/* breakpoints */
+/* desktop first approach */
+@media screen and (max-width: 1100px) {
+    .container {
+        max-width: 90%;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content 1fr;
+    }
+
+    .card-1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / span 2;
+    }
+
+    .card-2 {
+        grid-column: 2 / -1;
+        grid-row: 1 / span 1;
+    }
+
+    .card-3 {
+        grid-column: 2 / -1;
+        grid-row: 2 / span 1;
+    }
+
+    .card-4 {
+        grid-column: 1 / 2;
+        grid-row: 3 / -1;
+    }
+
+    .card-5 {
+        grid-column: 2 / -1;
+        grid-row: 3 / -1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .card-1,
+    .card-2,
+    .card-3,
+    .card-4,
+    .card-5 {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
 }
